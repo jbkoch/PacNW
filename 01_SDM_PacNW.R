@@ -1,9 +1,14 @@
-# Jesse Tabor
+# Jonathan B. Koch 
+# Orginator: Jesse Tabor (UH-Hilo)
 # BiodMod2: X. sonorina
 
 ## set where the program saves and looks for data ##
-# setwd("/Users/jonathankoch/Google Drive/git_myrepo/PacNW")
+setwd("/Users/jonathankoch/Google Drive/git_myrepo/PacNW")
+# www.unil.ch/hsdm
+# list files
 list.files()
+
+#test
 
 ## download the "packages" that have the required functions needed for the study ##
 # install.packages("rgbif")
@@ -19,6 +24,7 @@ list.files()
 # install.packages("latticeExtra")
 # install.packages("lattice")
 # install.packages("sp")
+#test
 
 # load libraries
 library(rgbif)
@@ -71,6 +77,7 @@ ggplot() +
   geom_point(data = df, aes(x = df$decimalLongitude, y = decimalLatitude), color = "black", size = 5)
 
 # create boundary of data visualization
+nrow(df)
 max_y = max(df$decimalLatitude+1)
 min_y = min(df$decimalLatitude-1)
 max_x = max(df$decimalLongitude+1)
@@ -88,117 +95,125 @@ ggplot() +
 # https://rstudio-pubs-static.s3.amazonaws.com/202536_7a122ff56e9f4062b6b012d9921afd80.html
 
 # make bounding box
-x_coord <- c(max_x, max_x, min_x, min_x)
-y_coord <- c(min_y, max_y, max_y, min_y)
-xym <- cbind(x_coord, y_coord)
-xym
+# to clip bioclimatic rasters
+# no need to this is if you did it the first time
+# x_coord <- c(max_x, max_x, min_x, min_x)
+# y_coord <- c(min_y, max_y, max_y, min_y)
+# xym <- cbind(x_coord, y_coord)
+# xym
 
 # polygon library
-p = Polygon(xym)
-ps = Polygons(list(p),1)
-sps = SpatialPolygons(list(ps))
-plot(sps)
+# don't need to make polygon after you
+# you clipped the B. vosnesenskii extent
+# for bioclimatic variables
+# p = Polygon(xym)
+# ps = Polygons(list(p),1)
+# sps = SpatialPolygons(list(ps))
+# plot(sps)
 
 # Enviromental variables selection
 # stack of all your climate variables together
 
-bio <- stack(list.files("bio",pattern = "bio",
-                        full.names = T),
-             RAT = FALSE)
+# bio <- stack(list.files("bio",pattern = "bio",
+#                        full.names = T),
+#             RAT = FALSE)
 
-bio_1 <- bio[[c(1)]]
-bio_1 <- mask(bio_1,sps)
-bio_1 <-crop(bio_1,sps)
+# bio_1 <- bio[[c(1)]]
+# bio_1 <- mask(bio_1,sps)
+# bio_1 <-crop(bio_1,sps)
 
-bio_10 <- bio[[c(2)]]
-bio_10 <- mask(bio_10,sps)
-bio_10 <-crop(bio_10,sps)
+# bio_10 <- bio[[c(2)]]
+# bio_10 <- mask(bio_10,sps)
+# bio_10 <-crop(bio_10,sps)
 
-bio_11 <- bio[[c(3)]]
-bio_11 <- mask(bio_11,sps)
-bio_11 <-crop(bio_11,sps)
+# bio_11 <- bio[[c(3)]]
+# bio_11 <- mask(bio_11,sps)
+# bio_11 <-crop(bio_11,sps)
 
-bio_12 <- bio[[c(4)]]
-bio_12 <- mask(bio_12,sps)
-bio_12 <-crop(bio_12,sps)
+# bio_12 <- bio[[c(4)]]
+# bio_12 <- mask(bio_12,sps)
+# bio_12 <-crop(bio_12,sps)
 
-bio_13 <- bio[[c(5)]]
-bio_13 <- mask(bio_13,sps)
-bio_13 <-crop(bio_13,sps)
+# bio_13 <- bio[[c(5)]]
+# bio_13 <- mask(bio_13,sps)
+# bio_13 <-crop(bio_13,sps)
 
-bio_14 <- bio[[c(6)]]
-bio_14 <- mask(bio_14,sps)
-bio_14 <-crop(bio_14,sps)
+# bio_14 <- bio[[c(6)]]
+# bio_14 <- mask(bio_14,sps)
+# bio_14 <-crop(bio_14,sps)
 
-bio_15 <- bio[[c(7)]]
-bio_15 <- mask(bio_15,sps)
-bio_15 <-crop(bio_15,sps)
+# bio_15 <- bio[[c(7)]]
+# bio_15 <- mask(bio_15,sps)
+# bio_15 <-crop(bio_15,sps)
 
-bio_16 <- bio[[c(8)]]
-bio_16 <- mask(bio_16,sps)
-bio_16 <-crop(bio_16,sps)
+# bio_16 <- bio[[c(8)]]
+# bio_16 <- mask(bio_16,sps)
+# bio_16 <-crop(bio_16,sps)
 
-bio_17 <- bio[[c(9)]]
-bio_17 <- mask(bio_17,sps)
-bio_17 <-crop(bio_17,sps)
+# bio_17 <- bio[[c(9)]]
+# bio_17 <- mask(bio_17,sps)
+# bio_17 <-crop(bio_17,sps)
 
-bio_18 <- bio[[c(10)]]
-bio_18 <- mask(bio_18,sps)
-bio_18 <-crop(bio_18,sps)
+# bio_18 <- bio[[c(10)]]
+# bio_18 <- mask(bio_18,sps)
+# bio_18 <-crop(bio_18,sps)
 
-bio_19 <- bio[[c(11)]]
-bio_19 <- mask(bio_19,sps)
-bio_19 <-crop(bio_19,sps)
+# bio_19 <- bio[[c(11)]]
+# bio_19 <- mask(bio_19,sps)
+# bio_19 <-crop(bio_19,sps)
 
-bio_2 <- bio[[c(12)]]
-bio_2 <- mask(bio_2,sps)
-bio_2 <-crop(bio_2,sps)
+# bio_2 <- bio[[c(12)]]
+# bio_2 <- mask(bio_2,sps)
+# bio_2 <-crop(bio_2,sps)
 
-bio_3 <- bio[[c(13)]]
-bio_3 <- mask(bio_3,sps)
-bio_3 <-crop(bio_3,sps)
+# bio_3 <- bio[[c(13)]]
+# bio_3 <- mask(bio_3,sps)
+# bio_3 <-crop(bio_3,sps)
 
-bio_4 <- bio[[c(14)]]
-bio_4 <- mask(bio_4,sps)
-bio_4 <-crop(bio_4,sps)
+# bio_4 <- bio[[c(14)]]
+# bio_4 <- mask(bio_4,sps)
+# bio_4 <-crop(bio_4,sps)
 
-bio_5 <- bio[[c(15)]]
-bio_5 <- mask(bio_5,sps)
-bio_5 <-crop(bio_5,sps)
+# bio_5 <- bio[[c(15)]]
+# bio_5 <- mask(bio_5,sps)
+# bio_5 <-crop(bio_5,sps)
 
-bio_6 <- bio[[c(16)]]
-bio_6 <- mask(bio_6,sps)
-bio_6 <-crop(bio_6,sps)
+# bio_6 <- bio[[c(16)]]
+# bio_6 <- mask(bio_6,sps)
+# bio_6 <-crop(bio_6,sps)
 
-bio_7 <- bio[[c(17)]]
-bio_7 <- mask(bio_7,sps)
-bio_7 <-crop(bio_7,sps)
+# bio_7 <- bio[[c(17)]]
+# bio_7 <- mask(bio_7,sps)
+# bio_7 <-crop(bio_7,sps)
 
-bio_8 <- bio[[c(18)]]
-bio_8 <- mask(bio_8,sps)
-bio_8 <-crop(bio_8,sps)
+# bio_8 <- bio[[c(18)]]
+# bio_8 <- mask(bio_8,sps)
+# bio_8 <-crop(bio_8,sps)
 
-bio_9 <- bio[[c(19)]]
-bio_9 <- mask(bio_9,sps)
-bio_9 <-crop(bio_9,sps)
+# bio_9 <- bio[[c(19)]]
+# bio_9 <- mask(bio_9,sps)
+# bio_9 <-crop(bio_9,sps)
 
-bioclim <- stack(c(bio_1, bio_10, bio_11,
-                   bio_12, bio_13, bio_14,
-                   bio_15, bio_16, bio_17,
-                   bio_18, bio_19, bio_2,
-                   bio_3, bio_4, bio_5,
-                   bio_6, bio_7, bio_8,
-                   bio_9))
+# bioclim <- stack(c(bio_1, bio_10, bio_11,
+#                    bio_12, bio_13, bio_14,
+#                    bio_15, bio_16, bio_17,
+#                    bio_18, bio_19, bio_2,
+#                    bio_3, bio_4, bio_5,
+#                    bio_6, bio_7, bio_8,
+#                    bio_9))
 
 # create directory to hold clipped and masked bioclim variables
-dir.create("vosnesenskii")
+# only create this directory once 
+# dir.create("vosnesenskii")
 
 # setwd()
 setwd("/Users/jonathankoch/Google Drive/git_myrepo/PacNW/vosnesenskii")
 
 # write the rasters
+# rasters are already made so only do this once
 writeRaster(bioclim, filename=names(bioclim), bylayer=TRUE, format="raster", overwrite = TRUE)
 
+# load the rasters back into the session
 bio_1 <-raster("bio_1.grd")
 bio_2 <-raster("bio_2.grd")
 bio_3 <-raster("bio_3.grd")
@@ -219,6 +234,7 @@ bio_17 <-raster("bio_17.grd")
 bio_18 <-raster("bio_18.grd")
 bio_19 <-raster("bio_19.grd")
 
+# turn them into a raster brick
 bioclim <- stack(c(bio_1, bio_10, bio_11,
                       bio_12, bio_13, bio_14,
                       bio_15, bio_16, bio_17,
@@ -241,6 +257,7 @@ bioclim_df <- na.omit(as.data.frame(bioclim))
 
 ##check and see what it did
 head(bioclim_df)
+nrow(bioclim_df)
 
 ##pca study over the whole study area
 ##dudi.pca performs a principal component analysis of a data frame and 
@@ -249,32 +266,43 @@ head(bioclim_df)
 ##PCA scores on the first two axes
 pca.df <- dudi.pca(bioclim_df, scannf = F, nf = 2)
 
-
 ##plot(pca_ZA$li[, 1:2])
 par(mfrow=c(1, 1))
 plot(pca.df$li[, 1:2])
 
-##tail of distrabutions
+##tail of distributions
+## allows me to get rid of abherrant data
 sort(pca.df$li[, 1], decreasing = TRUE)[1:7]
 
 
 ##IDs of points to remove
-(to_remove <- which(pca.df$li[, 1] > 11))
+to_remove <- which(pca.df$li[, 1] > 11)
+to_remove
 
-#remove points and recompute PCA
-if(length(to_remove)){bioclim_df <- bioclim_df[-to_remove]}
+## remove points and recompute PCA
+nrow(bioclim_df)
+if(length(to_remove)){ ## remove outliers
+  bioclim_df <- bioclim_df[ - to_remove,]
+  pca.df <- dudi.pca(bioclim_df,scannf = F, nf = 2)  
+}
+nrow(bioclim_df)
 
-#pca_HI <- -dudi.pca(bioclim_HI_df, scannf = F, nf = 2)}
+# plot the PCA again
+pca.df <- dudi.pca(bioclim_df,scannf = F, nf = 2)
+plot(pca.df$li[, 1:2])
 
-#plot(pca_HI$li[, 1:2])
 
+# save picture
+tiff("Fig1_bioclim_variable_selection.tiff",
+     width = 6, height = 4, units = 'in', res = 300)
 par(mfrow=c(1, 2))
 
 ##Discrminiate species prescences from the entire hawaiian enviromental space. (scatterplot)
+### need to figure out what df = 5 means
 s.class(pca.df$li[, 1:2],fac = factor(rownames(bioclim_df)%in% df_cell_id,
                                       levels = c("FALSE","TRUE"),
                                       labels = c("background","df")),
-        col = c("red","blue"),csta = 0,
+        col = c("light gray","black"),csta = 0,
         cellipse = 2,
         cpoint = .3,
         pch = 16)
@@ -284,9 +312,9 @@ mtext("(a)",side = 3,line = 3,adj = 0)
 
 ##second side of the plot panel b to help decide which variables to keep
 s.corcircle(pca.df$co,clabel = .5)
-
 mtext("(b)",side = 3, line = 3, adj = 0)
 
+dev.off()
 ##subselect four variables from the full enviromental set
 bioclim_sub <- stack(subset(bioclim, c("bio_2","bio_9","bio_15","bio_18")))
 
