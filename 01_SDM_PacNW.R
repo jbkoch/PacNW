@@ -307,8 +307,7 @@ setwd("./vosnesenskii")
 getwd()
 
 # save picture
-tiff("Fig1_bioclim_variable_selection.tiff",
-     width = 6, height = 4, units = 'in', res = 300)
+pdf("Fig1_bioclim_variable_selection.pdf")
 par(mfrow=c(1, 2))
 
 ##Discrminiate species prescences from the entire hawaiian enviromental space. (scatterplot)
@@ -354,9 +353,9 @@ df_data
 
 #plot of selected pseudo-absences
 ##displays the location of the psuedo absences in the three datasets compared to the species occurences
-# getwd() # check repository
-tiff("Fig2_inputdata_PA.tiff",
-     width = 8, height = 4, units = 'in', res = 300)
+
+# commit files outside of git 
+pdf("Fig2_inputdata_PA.pdf")
 par(mfrow=c(1, 1))
 plot(df_data)
 dev.off()
