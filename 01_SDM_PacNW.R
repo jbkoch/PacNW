@@ -292,6 +292,20 @@ pca.df <- dudi.pca(bioclim_df,scannf = F, nf = 2)
 plot(pca.df$li[, 1:2])
 
 
+# make directory to save figure outputs
+# already made Figures directory so save the species x figures accordingly
+dir.create("Figures")
+
+# set to Figures directory
+setwd("./Figures")
+
+# create species specific subdirectory
+dir.create("vosnesenskii")
+
+# set species specific subdirectory
+setwd("./vosnesenskii")
+getwd()
+
 # save picture
 tiff("Fig1_bioclim_variable_selection.tiff",
      width = 6, height = 4, units = 'in', res = 300)
@@ -315,16 +329,23 @@ s.corcircle(pca.df$co,clabel = .5)
 mtext("(b)",side = 3, line = 3, adj = 0)
 
 dev.off()
-##subselect four variables from the full enviromental set
-bioclim_sub <- stack(subset(bioclim, c("bio_2","bio_9","bio_15","bio_18")))
+
+## subselect variables from the full enviromental set based on
+## PCA results of target species
+bioclim_sub <- stack(subset(bioclim, c("bio_4","bio_7","bio_2",
+                                       "bio_14", "bio_18","bio_5",
+                                       "bio_10", "bio_1", "bio_3",
+                                       "bio_11", "bio_6", "bio_15",
+                                       "bio_19", "bio_12", "bio_9")))
 
 ##Biomod2 modeling procedure
 
 ##next we put the data into the right format by using the BIOMOD_formattingData function
+##default pseudo-absence is 10,000
 df_data <- BIOMOD_FormatingData(resp.var = rep(1,nrow(df)),
                                    expl.var = bioclim_sub,
                                    resp.xy = df[,c('decimalLongitude','decimalLatitude')],
-                                   resp.name = "B. vosnesenskii",
+                                   resp.name = "Bombus vosnesenskii",
                                    PA.nb.rep = 3,PA.nb.absences = 10000,
                                    PA.strategy = 'random')
 
@@ -333,8 +354,12 @@ df_data
 
 #plot of selected pseudo-absences
 ##displays the location of the psuedo absences in the three datasets compared to the species occurences
+# getwd() # check repository
+tiff("Fig2_inputdata_PA.tiff",
+     width = 8, height = 4, units = 'in', res = 300)
+par(mfrow=c(1, 1))
 plot(df_data)
-
+dev.off()
 ##this line picks the modeling options
 df_opt <- BIOMOD_ModelingOptions(GLM = list(type = 'quadratic',
                                                interaction.level = 1),
