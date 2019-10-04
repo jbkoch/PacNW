@@ -49,10 +49,10 @@ world <- map_data("world") # from maps
 north_america <- subset(world, region %in% c("Canada", "Mexico", "USA"))
 
 # create boundary of data visualization
-max_y = max(df$decimalLatitude)
-min_y = min(df$decimalLatitude)
-max_x = max(df$decimalLongitude)
-min_x = min(df$decimalLongitude)
+max_y = max(df$decimalLatitude+1)
+min_y = min(df$decimalLatitude-1)
+max_x = max(df$decimalLongitude+1)
+min_x = min(df$decimalLongitude-1)
 
 # check out data
 ggplot() + 
@@ -69,6 +69,19 @@ ggplot() +
   geom_polygon(data = north_america, aes(x=long, y = lat, group = group)) + 
   coord_sf(xlim = c(min_x, max_x), ylim = c(min_y, max_y), expand = FALSE) + #xlim = longitude, ylim = latitude
   geom_point(data = df, aes(x = df$decimalLongitude, y = decimalLatitude), color = "black", size = 5)
+
+# create boundary of data visualization
+max_y = max(df$decimalLatitude+1)
+min_y = min(df$decimalLatitude-1)
+max_x = max(df$decimalLongitude+1)
+min_x = min(df$decimalLongitude-1)
+
+# check out data
+ggplot() + 
+  geom_polygon(data = north_america, aes(x=long, y = lat, group = group)) + 
+  coord_sf(xlim = c(min_x, max_x), ylim = c(min_y, max_y), expand = FALSE) + #xlim = longitude, ylim = latitude
+  geom_point(data = df, aes(x = df$decimalLongitude, y = decimalLatitude), color = "black", size = 5)
+
 
 # create mask from max/min latitude (y) and longitude (x)
 # create spatial polygons
