@@ -211,9 +211,10 @@ setwd("/Users/jonathankoch/Google Drive/git_myrepo/PacNW/vosnesenskii")
 
 # write the rasters
 # rasters are already made so only do this once
-writeRaster(bioclim, filename=names(bioclim), bylayer=TRUE, format="raster", overwrite = TRUE)
+# writeRaster(bioclim, filename=names(bioclim), bylayer=TRUE, format="raster", overwrite = TRUE)
 
 # load the rasters back into the session
+list.files()
 bio_1 <-raster("bio_1.grd")
 bio_2 <-raster("bio_2.grd")
 bio_3 <-raster("bio_3.grd")
@@ -359,18 +360,17 @@ pdf("Fig2_inputdata_PA.pdf")
 par(mfrow=c(1, 1))
 plot(df_data)
 dev.off()
+
+# change directory for the files of modeling
+setwd("/Users/jonathankoch/Documents/PacNW")
+
 ##this line picks the modeling options
-df_opt <- BIOMOD_ModelingOptions(GLM = list(type = 'quadratic',
-                                               interaction.level = 1),
-                                    GBM = list(n.trees = 1000),
-                                    GAM = list(algo ='GAM_mgcv'))
+df_opt <- BIOMOD_ModelingOptions(MAXENT.Phillips = list(path_to_maxent.jar = "/Users/jonathankoch/Documents/maxent_files"))
 
 
 ##next line we run the model with 4 diffrent models
 df_models <- BIOMOD_Modeling(data = df_data,
-                             models = c("GLM","GBM","RF","GAM",
-                                        "CTA","ANN","SRE","FDA",
-                                        "MARS"),
+                             models = c("MAXENT.Phillips", "GLM"),
                              models.options = df_opt, 
                              NbRunEval = 4, DataSplit = 80,
                              VarImport = 3, do.full.models = F,
