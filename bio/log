@@ -1,0 +1,415 @@
+200601011857   0    17     0rhijmans P1 = int(floor(mean(..\tmean\tmean_1,..\tmean\tmean_2,..\tmean\tmean_3,..\tmean\tmean_4,..\tmean\tmean_5,..\tmean\tmean_6,..\tmean\tmean_7,..\tmean\tmean_8,..\tmean\tmean_9,..\tmean\tmean_10,..\tmean\tmean_11,..\tmean\tmean_12) + 0.5))
+200601011857   0    17     0rhijmans P4 = int(floor(100 * std(..\tmean\tmean_1,..\tmean\tmean_2,..\tmean\tmean_3,..\tmean\tmean_4,..\tmean\tmean_5,..\tmean\tmean_6,..\tmean\tmean_7,..\tmean\tmean_8,..\tmean\tmean_9,..\tmean\tmean_10,..\tmean\tmean_11,..\tmean\tmean_12) + 0.5))
+200601011858   1    14     0rhijmans P5 = max(..\tmax\tmax_1,..\tmax\tmax_2,..\tmax\tmax_3,..\tmax\tmax_4,..\tmax\tmax_5,..\tmax\tmax_6,..\tmax\tmax_7,..\tmax\tmax_8,..\tmax\tmax_9,..\tmax\tmax_10,..\tmax\tmax_11,..\tmax\tmax_12)
+200601011858   0    13     0rhijmans P6 = min(..\tmin\tmin_1,..\tmin\tmin_2,..\tmin\tmin_3,..\tmin\tmin_4,..\tmin\tmin_5,..\tmin\tmin_6,..\tmin\tmin_7,..\tmin\tmin_8,..\tmin\tmin_9,..\tmin\tmin_10,..\tmin\tmin_11,..\tmin\tmin_12)
+200601011858   0     4     0rhijmans P7 = P5 - P6
+200601011858   0    16     0rhijmans P12 = sum(..\prec\prec_1,..\prec\prec_2,..\prec\prec_3,..\prec\prec_4,..\prec\prec_5,..\prec\prec_6,..\prec\prec_7,..\prec\prec_8,..\prec\prec_9,..\prec\prec_10,..\prec\prec_11,..\prec\prec_12)
+200601011859   1    14     0rhijmans P13 = max(..\prec\prec_1,..\prec\prec_2,..\prec\prec_3,..\prec\prec_4,..\prec\prec_5,..\prec\prec_6,..\prec\prec_7,..\prec\prec_8,..\prec\prec_9,..\prec\prec_10,..\prec\prec_11,..\prec\prec_12)
+200601011859   0    14     0rhijmans P14 = min(..\prec\prec_1,..\prec\prec_2,..\prec\prec_3,..\prec\prec_4,..\prec\prec_5,..\prec\prec_6,..\prec\prec_7,..\prec\prec_8,..\prec\prec_9,..\prec\prec_10,..\prec\prec_11,..\prec\prec_12)
+200601011859   0    19     0rhijmans P15 = int(floor(100 * std(..\prec\prec_1,..\prec\prec_2,..\prec\prec_3,..\prec\prec_4,..\prec\prec_5,..\prec\prec_6,..\prec\prec_7,..\prec\prec_8,..\prec\prec_9,..\prec\prec_10,..\prec\prec_11,..\prec\prec_12) / (1 + P12 / 12) + 0.5))
+200601011859   0     4     0rhijmans RG1 = ..\tmax\tmax_1 - ..\tmin\tmin_1
+200601011859   0     4     0rhijmans RG2 = ..\tmax\tmax_2 - ..\tmin\tmin_2
+200601011859   0     4     0rhijmans RG3 = ..\tmax\tmax_3 - ..\tmin\tmin_3
+200601011859   0     5     0rhijmans RG4 = ..\tmax\tmax_4 - ..\tmin\tmin_4
+200601011900   1     4     0rhijmans RG5 = ..\tmax\tmax_5 - ..\tmin\tmin_5
+200601011900   0     4     0rhijmans RG6 = ..\tmax\tmax_6 - ..\tmin\tmin_6
+200601011900   0     4     0rhijmans RG7 = ..\tmax\tmax_7 - ..\tmin\tmin_7
+200601011900   0     5     0rhijmans RG8 = ..\tmax\tmax_8 - ..\tmin\tmin_8
+200601011900   0     4     0rhijmans RG9 = ..\tmax\tmax_9 - ..\tmin\tmin_9
+200601011900   0     4     0rhijmans RG10 = ..\tmax\tmax_10 - ..\tmin\tmin_10
+200601011900   0     4     0rhijmans RG11 = ..\tmax\tmax_11 - ..\tmin\tmin_11
+200601011900   0     5     0rhijmans RG12 = ..\tmax\tmax_12 - ..\tmin\tmin_12
+200601011900   0    16     0rhijmans P2 = int(floor(mean(rg1,rg2,rg3,rg4,rg5,rg6,rg7,rg8,rg9,rg10,rg11,rg12) + 0.5))
+200601011900   0     8     0rhijmans P3 = int(floor(100 * P2 / P7) + 0.5)
+200601011900   0     0     0rhijmans KILL rg1
+200601011900   0     0     0rhijmans KILL rg2
+200601011900   0     0     0rhijmans KILL rg3
+200601011900   0     0     0rhijmans KILL rg4
+200601011900   0     0     0rhijmans KILL rg5
+200601011900   0     0     0rhijmans KILL rg6
+200601011900   0     0     0rhijmans KILL rg7
+200601011900   0     0     0rhijmans KILL rg8
+200601011900   0     0     0rhijmans KILL rg9
+200601011900   0     0     0rhijmans KILL rg10
+200601011900   0     0     0rhijmans KILL rg11
+200601011900   0     0     0rhijmans KILL rg12
+200601011901   1     5     0rhijmans Q1 = ..\prec\prec_1 + ..\prec\prec_2 + ..\prec\prec_3
+200601011901   0     5     0rhijmans T1 = ..\tmean\tmean_1 + ..\tmean\tmean_2 + ..\tmean\tmean_3
+200601011901   0     5     0rhijmans Q2 = ..\prec\prec_2 + ..\prec\prec_3 + ..\prec\prec_4
+200601011901   0     6     0rhijmans T2 = ..\tmean\tmean_2 + ..\tmean\tmean_3 + ..\tmean\tmean_4
+200601011901   0     5     0rhijmans Q3 = ..\prec\prec_3 + ..\prec\prec_4 + ..\prec\prec_5
+200601011901   0     5     0rhijmans T3 = ..\tmean\tmean_3 + ..\tmean\tmean_4 + ..\tmean\tmean_5
+200601011901   0     6     0rhijmans Q4 = ..\prec\prec_4 + ..\prec\prec_5 + ..\prec\prec_6
+200601011901   0     5     0rhijmans T4 = ..\tmean\tmean_4 + ..\tmean\tmean_5 + ..\tmean\tmean_6
+200601011901   0     5     0rhijmans Q5 = ..\prec\prec_5 + ..\prec\prec_6 + ..\prec\prec_7
+200601011901   0     6     0rhijmans T5 = ..\tmean\tmean_5 + ..\tmean\tmean_6 + ..\tmean\tmean_7
+200601011902   1     5     0rhijmans Q6 = ..\prec\prec_6 + ..\prec\prec_7 + ..\prec\prec_8
+200601011902   0     6     0rhijmans T6 = ..\tmean\tmean_6 + ..\tmean\tmean_7 + ..\tmean\tmean_8
+200601011902   0     5     0rhijmans Q7 = ..\prec\prec_7 + ..\prec\prec_8 + ..\prec\prec_9
+200601011902   0     6     0rhijmans T7 = ..\tmean\tmean_7 + ..\tmean\tmean_8 + ..\tmean\tmean_9
+200601011902   0     5     0rhijmans Q8 = ..\prec\prec_8 + ..\prec\prec_9 + ..\prec\prec_10
+200601011902   0     5     0rhijmans T8 = ..\tmean\tmean_8 + ..\tmean\tmean_9 + ..\tmean\tmean_10
+200601011902   0     6     0rhijmans Q9 = ..\prec\prec_9 + ..\prec\prec_10 + ..\prec\prec_11
+200601011902   0     5     0rhijmans T9 = ..\tmean\tmean_9 + ..\tmean\tmean_10 + ..\tmean\tmean_11
+200601011902   0     5     0rhijmans Q10 = ..\prec\prec_10 + ..\prec\prec_11 + ..\prec\prec_12
+200601011902   0     6     0rhijmans T10 = ..\tmean\tmean_10 + ..\tmean\tmean_11 + ..\tmean\tmean_12
+200601011902   0     5     0rhijmans Q11 = ..\prec\prec_11 + ..\prec\prec_12 + ..\prec\prec_1
+200601011903   1     5     0rhijmans T11 = ..\tmean\tmean_11 + ..\tmean\tmean_12 + ..\tmean\tmean_1
+200601011903   0     5     0rhijmans Q12 = ..\prec\prec_12 + ..\prec\prec_1 + ..\prec\prec_2
+200601011903   0     5     0rhijmans T12 = ..\tmean\tmean_12 + ..\tmean\tmean_1 + ..\tmean\tmean_2
+200601011903   0     3     0rhijmans MNT0 = con(isnull(q1),0,100)
+200601011903   0     2     0rhijmans MNT1 = setnull(mnt0 < 1, 1)
+200601011903   0     3     0rhijmans WET1 = q1
+200601011903   0     5     0rhijmans MNT2 = con(q2 > wet1, 2, mnt1)
+200601011903   0     5     0rhijmans WET2 = con(q2 > wet1, q2, wet1)
+200601011903   0     4     0rhijmans MNT3 = con(q3 > wet2, 3, mnt2)
+200601011903   0     5     0rhijmans WET3 = con(q3 > wet2, q3, wet2)
+200601011903   0     5     0rhijmans MNT4 = con(q4 > wet3, 4, mnt3)
+200601011903   0     5     0rhijmans WET4 = con(q4 > wet3, q4, wet3)
+200601011903   0     5     0rhijmans MNT5 = con(q5 > wet4, 5, mnt4)
+200601011904   1     5     0rhijmans WET5 = con(q5 > wet4, q5, wet4)
+200601011904   0     4     0rhijmans MNT6 = con(q6 > wet5, 6, mnt5)
+200601011904   0     5     0rhijmans WET6 = con(q6 > wet5, q6, wet5)
+200601011904   0     5     0rhijmans MNT7 = con(q7 > wet6, 7, mnt6)
+200601011904   0     5     0rhijmans WET7 = con(q7 > wet6, q7, wet6)
+200601011904   0     5     0rhijmans MNT8 = con(q8 > wet7, 8, mnt7)
+200601011904   0     5     0rhijmans WET8 = con(q8 > wet7, q8, wet7)
+200601011904   0     5     0rhijmans MNT9 = con(q9 > wet8, 9, mnt8)
+200601011904   0     5     0rhijmans WET9 = con(q9 > wet8, q9, wet8)
+200601011904   0     4     0rhijmans MNT10 = con(q10 > wet9, 10, mnt9)
+200601011904   0     6     0rhijmans WET10 = con(q10 > wet9, q10, wet9)
+200601011904   0  -425     0rhijmans MNT11 = con(q11 > wet10, 11, mnt10)
+200601011904   0     5     0rhijmans WET11 = con(q11 > wet10, q11, wet10)
+200601011905   1     4     0rhijmans MNT12 = con(q12 > wet11, 12, mnt11)
+200601011905   0     6     0rhijmans WET12 = con(q12 > wet11, q12, wet11)
+200601011905   0     1     0rhijmans WETM = mnt12
+200601011905   0     4     0rhijmans P16 = wet12
+200601011905   0     0     0rhijmans KILL mnt1
+200601011905   0     0     0rhijmans KILL wet1
+200601011905   0     0     0rhijmans KILL mnt2
+200601011905   0     0     0rhijmans KILL wet2
+200601011905   0     0     0rhijmans KILL mnt3
+200601011905   0     0     0rhijmans KILL wet3
+200601011905   0     0     0rhijmans KILL mnt4
+200601011905   0     0     0rhijmans KILL wet4
+200601011905   0     0     0rhijmans KILL mnt5
+200601011905   0     0     0rhijmans KILL wet5
+200601011905   0     0     0rhijmans KILL mnt6
+200601011905   0     0     0rhijmans KILL wet6
+200601011905   0     0     0rhijmans KILL mnt7
+200601011905   0     0     0rhijmans KILL wet7
+200601011905   0     0     0rhijmans KILL mnt8
+200601011905   0     0     0rhijmans KILL wet8
+200601011905   0     0     0rhijmans KILL mnt9
+200601011905   0     0     0rhijmans KILL wet9
+200601011905   0     0     0rhijmans KILL mnt10
+200601011905   0     0     0rhijmans KILL wet10
+200601011905   0     0     0rhijmans KILL mnt11
+200601011905   0     0     0rhijmans KILL wet11
+200601011905   0     0     0rhijmans KILL mnt12
+200601011905   0     0     0rhijmans KILL wet12
+200601011905   0     2     0rhijmans MNT1 = setnull(mnt0 < 1, 1)
+200601011905   0     3     0rhijmans DRY1 = q1
+200601011905   0     5     0rhijmans MNT2 = con(q2 < dry1, 2, mnt1)
+200601011905   0     5     0rhijmans DRY2 = con(q2 < dry1, q2, dry1)
+200601011905   0     4     0rhijmans MNT3 = con(q3 < dry2, 3, mnt2)
+200601011905   0     5     0rhijmans DRY3 = con(q3 < dry2, q3, dry2)
+200601011905   0     5     0rhijmans MNT4 = con(q4 < dry3, 4, mnt3)
+200601011905   0     5     0rhijmans DRY4 = con(q4 < dry3, q4, dry3)
+200601011905   0     4     0rhijmans MNT5 = con(q5 < dry4, 5, mnt4)
+200601011905   0     5     0rhijmans DRY5 = con(q5 < dry4, q5, dry4)
+200601011906   1     5     0rhijmans MNT6 = con(q6 < dry5, 6, mnt5)
+200601011906   0     4     0rhijmans DRY6 = con(q6 < dry5, q6, dry5)
+200601011906   0     5     0rhijmans MNT7 = con(q7 < dry6, 7, mnt6)
+200601011906   0     5     0rhijmans DRY7 = con(q7 < dry6, q7, dry6)
+200601011906   0     4     0rhijmans MNT8 = con(q8 < dry7, 8, mnt7)
+200601011906   0     5     0rhijmans DRY8 = con(q8 < dry7, q8, dry7)
+200601011906   0     5     0rhijmans MNT9 = con(q9 < dry8, 9, mnt8)
+200601011906   0     4     0rhijmans DRY9 = con(q9 < dry8, q9, dry8)
+200601011906   0     5     0rhijmans MNT10 = con(q10 < dry9, 10, mnt9)
+200601011906   0     5     0rhijmans DRY10 = con(q10 < dry9, q10, dry9)
+200601011906   0     5     0rhijmans MNT11 = con(q11 < dry10, 11, mnt10)
+200601011906   0     4     0rhijmans DRY11 = con(q11 < dry10, q11, dry10)
+200601011907   1     5     0rhijmans MNT12 = con(q12 < dry11, 12, mnt11)
+200601011907   0     5     0rhijmans DRY12 = con(q12 < dry11, q12, dry11)
+200601011907   0     1     0rhijmans DRYM = mnt12
+200601011907   0     4     0rhijmans P17 = dry12
+200601011907   0     0     0rhijmans KILL mnt1
+200601011907   0     0     0rhijmans KILL dry1
+200601011907   0     0     0rhijmans KILL mnt2
+200601011907   0     0     0rhijmans KILL dry2
+200601011907   0     0     0rhijmans KILL mnt3
+200601011907   0     0     0rhijmans KILL dry3
+200601011907   0     0     0rhijmans KILL mnt4
+200601011907   0     0     0rhijmans KILL dry4
+200601011907   0     0     0rhijmans KILL mnt5
+200601011907   0     0     0rhijmans KILL dry5
+200601011907   0     0     0rhijmans KILL mnt6
+200601011907   0     0     0rhijmans KILL dry6
+200601011907   0     0     0rhijmans KILL mnt7
+200601011907   0     0     0rhijmans KILL dry7
+200601011907   0     0     0rhijmans KILL mnt8
+200601011907   0     0     0rhijmans KILL dry8
+200601011907   0     0     0rhijmans KILL mnt9
+200601011907   0     0     0rhijmans KILL dry9
+200601011907   0     0     0rhijmans KILL mnt10
+200601011907   0     0     0rhijmans KILL dry10
+200601011907   0     0     0rhijmans KILL mnt11
+200601011907   0     0     0rhijmans KILL dry11
+200601011907   0     0     0rhijmans KILL mnt12
+200601011907   0     0     0rhijmans KILL dry12
+200601011907   0     0     0rhijmans KILL mnt0
+200601011907   0     4     0rhijmans X1 = con(wetm == 1, t1, -9999)
+200601011907   0     5     0rhijmans Y1 = con(drym == 1, t1, -9999)
+200601011907   0     4     0rhijmans X2 = con(wetm == 2, t2, -9999)
+200601011907   0     4     0rhijmans Y2 = con(drym == 2, t2, -9999)
+200601011907   0     4     0rhijmans X3 = con(wetm == 3, t3, -9999)
+200601011907   0     5     0rhijmans Y3 = con(drym == 3, t3, -9999)
+200601011907   0     4     0rhijmans X4 = con(wetm == 4, t4, -9999)
+200601011907   0     4     0rhijmans Y4 = con(drym == 4, t4, -9999)
+200601011907   0     4     0rhijmans X5 = con(wetm == 5, t5, -9999)
+200601011907   0     4     0rhijmans Y5 = con(drym == 5, t5, -9999)
+200601011908   1     5     0rhijmans X6 = con(wetm == 6, t6, -9999)
+200601011908   0     4     0rhijmans Y6 = con(drym == 6, t6, -9999)
+200601011908   0     5     0rhijmans X7 = con(wetm == 7, t7, -9999)
+200601011908   0     4     0rhijmans Y7 = con(drym == 7, t7, -9999)
+200601011908   0     4     0rhijmans X8 = con(wetm == 8, t8, -9999)
+200601011908   0     4     0rhijmans Y8 = con(drym == 8, t8, -9999)
+200601011908   0     4     0rhijmans X9 = con(wetm == 9, t9, -9999)
+200601011908   0     4     0rhijmans Y9 = con(drym == 9, t9, -9999)
+200601011908   0     5     0rhijmans X10 = con(wetm == 10, t10, -9999)
+200601011908   0     4     0rhijmans Y10 = con(drym == 10, t10, -9999)
+200601011908   0     4     0rhijmans X11 = con(wetm == 11, t11, -9999)
+200601011908   0     4     0rhijmans Y11 = con(drym == 11, t11, -9999)
+200601011908   0     4     0rhijmans X12 = con(wetm == 12, t12, -9999)
+200601011908   0     5     0rhijmans Y12 = con(drym == 12, t12, -9999)
+200601011909   1    15     0rhijmans P8 = int(floor(max(x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12) / 3 + 0.5))
+200601011909   0    16     0rhijmans P9 = int(floor(max(y1,y2,y3,y4,y5,y6,y7,y8,y9,y10,y11,y12) / 3 + 0.5))
+200601011909   0     0     0rhijmans KILL x1
+200601011909   0     0     0rhijmans KILL y1
+200601011909   0     0     0rhijmans KILL x2
+200601011909   0     0     0rhijmans KILL y2
+200601011909   0     0     0rhijmans KILL x3
+200601011909   0     0     0rhijmans KILL y3
+200601011909   0     0     0rhijmans KILL x4
+200601011909   0     0     0rhijmans KILL y4
+200601011909   0     0     0rhijmans KILL x5
+200601011909   0     0     0rhijmans KILL y5
+200601011909   0     0     0rhijmans KILL x6
+200601011909   0     0     0rhijmans KILL y6
+200601011909   0     0     0rhijmans KILL x7
+200601011909   0     0     0rhijmans KILL y7
+200601011909   0     0     0rhijmans KILL x8
+200601011909   0     0     0rhijmans KILL y8
+200601011909   0     0     0rhijmans KILL x9
+200601011909   0     0     0rhijmans KILL y9
+200601011909   0     0     0rhijmans KILL x10
+200601011909   0     0     0rhijmans KILL y10
+200601011909   0     0     0rhijmans KILL x11
+200601011909   0     0     0rhijmans KILL y11
+200601011909   0     0     0rhijmans KILL x12
+200601011909   0     0     0rhijmans KILL y12
+200601011909   0     4     0rhijmans MNT0 = con(isnull(t1),0,100)
+200601011909   0     1     0rhijmans MNT1 = setnull(mnt0 < 1, 1)
+200601011909   0     4     0rhijmans HOT1 = t1
+200601011909   0     5     0rhijmans MNT2 = con(t2 > hot1, 2, mnt1)
+200601011909   0     5     0rhijmans HOT2 = con(t2 > hot1, t2, hot1)
+200601011909   0     5     0rhijmans MNT3 = con(t3 > hot2, 3, mnt2)
+200601011910   1     5     0rhijmans HOT3 = con(t3 > hot2, t3, hot2)
+200601011910   0     5     0rhijmans MNT4 = con(t4 > hot3, 4, mnt3)
+200601011910   0     5     0rhijmans HOT4 = con(t4 > hot3, t4, hot3)
+200601011910   0     5     0rhijmans MNT5 = con(t5 > hot4, 5, mnt4)
+200601011910   0     5     0rhijmans HOT5 = con(t5 > hot4, t5, hot4)
+200601011910   0     5     0rhijmans MNT6 = con(t6 > hot5, 6, mnt5)
+200601011910   0     5     0rhijmans HOT6 = con(t6 > hot5, t6, hot5)
+200601011910   0     5     0rhijmans MNT7 = con(t7 > hot6, 7, mnt6)
+200601011910   0     5     0rhijmans HOT7 = con(t7 > hot6, t7, hot6)
+200601011910   0     4     0rhijmans MNT8 = con(t8 > hot7, 8, mnt7)
+200601011910   0     6     0rhijmans HOT8 = con(t8 > hot7, t8, hot7)
+200601011910   0     4     0rhijmans MNT9 = con(t9 > hot8, 9, mnt8)
+200601011911   1     6     0rhijmans HOT9 = con(t9 > hot8, t9, hot8)
+200601011911   0     4     0rhijmans MNT10 = con(t10 > hot9, 10, mnt9)
+200601011911   0     5     0rhijmans HOT10 = con(t10 > hot9, t10, hot9)
+200601011911   0     5     0rhijmans MNT11 = con(t11 > hot10, 11, mnt10)
+200601011911   0     5     0rhijmans HOT11 = con(t11 > hot10, t11, hot10)
+200601011911   0     5     0rhijmans MNT12 = con(t12 > hot11, 12, mnt11)
+200601011911   0     5     0rhijmans HOT12 = con(t12 > hot11, t12, hot11)
+200601011911   0     2     0rhijmans HOTM = mnt12
+200601011911   0     6     0rhijmans P10 = int(floor(hot12 / 3 + 0.5))
+200601011911   0     1     0rhijmans KILL mnt1
+200601011911   0     0     0rhijmans KILL hot1
+200601011911   0     0     0rhijmans KILL mnt2
+200601011911   0     0     0rhijmans KILL hot2
+200601011911   0     0     0rhijmans KILL mnt3
+200601011911   0     0     0rhijmans KILL hot3
+200601011911   0     0     0rhijmans KILL mnt4
+200601011911   0     0     0rhijmans KILL hot4
+200601011911   0     0     0rhijmans KILL mnt5
+200601011911   0     0     0rhijmans KILL hot5
+200601011911   0     0     0rhijmans KILL mnt6
+200601011911   0     0     0rhijmans KILL hot6
+200601011911   0     0     0rhijmans KILL mnt7
+200601011911   0     0     0rhijmans KILL hot7
+200601011911   0     0     0rhijmans KILL mnt8
+200601011911   0     0     0rhijmans KILL hot8
+200601011911   0     0     0rhijmans KILL mnt9
+200601011911   0     0     0rhijmans KILL hot9
+200601011911   0     0     0rhijmans KILL mnt10
+200601011911   0     0     0rhijmans KILL hot10
+200601011911   0     0     0rhijmans KILL mnt11
+200601011911   0     0     0rhijmans KILL hot11
+200601011911   0     0     0rhijmans KILL mnt12
+200601011911   0     0     0rhijmans KILL hot12
+200601011911   0     2     0rhijmans MNT1 = setnull(mnt0 < 1, 1)
+200601011911   0     4     0rhijmans CLD1 = t1
+200601011911   0     4     0rhijmans MNT2 = con(t2 < cld1, 2, mnt1)
+200601011911   0     6     0rhijmans CLD2 = con(t2 < cld1, t2, cld1)
+200601011912   1     4     0rhijmans MNT3 = con(t3 < cld2, 3, mnt2)
+200601011912   0     6     0rhijmans CLD3 = con(t3 < cld2, t3, cld2)
+200601011912   0     4     0rhijmans MNT4 = con(t4 < cld3, 4, mnt3)
+200601011912   0  -424     0rhijmans CLD4 = con(t4 < cld3, t4, cld3)
+200601011912   0     5     0rhijmans MNT5 = con(t5 < cld4, 5, mnt4)
+200601011912   0     5     0rhijmans CLD5 = con(t5 < cld4, t5, cld4)
+200601011912   0     5     0rhijmans MNT6 = con(t6 < cld5, 6, mnt5)
+200601011912   0     5     0rhijmans CLD6 = con(t6 < cld5, t6, cld5)
+200601011912   0     5     0rhijmans MNT7 = con(t7 < cld6, 7, mnt6)
+200601011912   0     5     0rhijmans CLD7 = con(t7 < cld6, t7, cld6)
+200601011912   0     5     0rhijmans MNT8 = con(t8 < cld7, 8, mnt7)
+200601011912   0     5     0rhijmans CLD8 = con(t8 < cld7, t8, cld7)
+200601011913   1     5     0rhijmans MNT9 = con(t9 < cld8, 9, mnt8)
+200601011913   0     5     0rhijmans CLD9 = con(t9 < cld8, t9, cld8)
+200601011913   0     5     0rhijmans MNT10 = con(t10 < cld9, 10, mnt9)
+200601011913   0     5     0rhijmans CLD10 = con(t10 < cld9, t10, cld9)
+200601011913   0     5     0rhijmans MNT11 = con(t11 < cld10, 11, mnt10)
+200601011913   0     5     0rhijmans CLD11 = con(t11 < cld10, t11, cld10)
+200601011913   0     4     0rhijmans MNT12 = con(t12 < cld11, 12, mnt11)
+200601011913   0     6     0rhijmans CLD12 = con(t12 < cld11, t12, cld11)
+200601011913   0     2     0rhijmans CLDM = mnt12
+200601011913   0     6     0rhijmans P11 = int(floor(cld12 / 3 + 0.5))
+200601011913   0     0     0rhijmans KILL mnt1
+200601011913   0     0     0rhijmans KILL cld1
+200601011913   0     0     0rhijmans KILL mnt2
+200601011913   0     0     0rhijmans KILL cld2
+200601011913   0     0     0rhijmans KILL mnt3
+200601011913   0     0     0rhijmans KILL cld3
+200601011913   0     0     0rhijmans KILL mnt4
+200601011913   0     0     0rhijmans KILL cld4
+200601011913   0     0     0rhijmans KILL mnt5
+200601011913   0     0     0rhijmans KILL cld5
+200601011913   0     0     0rhijmans KILL mnt6
+200601011913   0     0     0rhijmans KILL cld6
+200601011913   0     0     0rhijmans KILL mnt7
+200601011913   0     0     0rhijmans KILL cld7
+200601011913   0     0     0rhijmans KILL mnt8
+200601011913   0     0     0rhijmans KILL cld8
+200601011913   0     0     0rhijmans KILL mnt9
+200601011913   0     0     0rhijmans KILL cld9
+200601011913   0     0     0rhijmans KILL mnt10
+200601011913   0     0     0rhijmans KILL cld10
+200601011913   0     0     0rhijmans KILL mnt11
+200601011913   0     0     0rhijmans KILL cld11
+200601011913   0     0     0rhijmans KILL mnt12
+200601011913   0     0     0rhijmans KILL cld12
+200601011913   0     0     0rhijmans KILL mnt0
+200601011913   0     5     0rhijmans X1 = con(hotm == 1, q1, -9999)
+200601011913   0     4     0rhijmans Y1 = con(cldm == 1, q1, -9999)
+200601011913   0     4     0rhijmans X2 = con(hotm == 2, q2, -9999)
+200601011914   1     4     0rhijmans Y2 = con(cldm == 2, q2, -9999)
+200601011914   0     4     0rhijmans X3 = con(hotm == 3, q3, -9999)
+200601011914   0     4     0rhijmans Y3 = con(cldm == 3, q3, -9999)
+200601011914   0     4     0rhijmans X4 = con(hotm == 4, q4, -9999)
+200601011914   0     5     0rhijmans Y4 = con(cldm == 4, q4, -9999)
+200601011914   0     4     0rhijmans X5 = con(hotm == 5, q5, -9999)
+200601011914   0     4     0rhijmans Y5 = con(cldm == 5, q5, -9999)
+200601011914   0     4     0rhijmans X6 = con(hotm == 6, q6, -9999)
+200601011914   0     5     0rhijmans Y6 = con(cldm == 6, q6, -9999)
+200601011914   0     4     0rhijmans X7 = con(hotm == 7, q7, -9999)
+200601011914   0     4     0rhijmans Y7 = con(cldm == 7, q7, -9999)
+200601011914   0     4     0rhijmans X8 = con(hotm == 8, q8, -9999)
+200601011914   0     4     0rhijmans Y8 = con(cldm == 8, q8, -9999)
+200601011914   0     4     0rhijmans X9 = con(hotm == 9, q9, -9999)
+200601011915   1     4     0rhijmans Y9 = con(cldm == 9, q9, -9999)
+200601011915   0     4     0rhijmans X10 = con(hotm == 10, q10, -9999)
+200601011915   0     5     0rhijmans Y10 = con(cldm == 10, q10, -9999)
+200601011915   0     4     0rhijmans X11 = con(hotm == 11, q11, -9999)
+200601011915   0     4     0rhijmans Y11 = con(cldm == 11, q11, -9999)
+200601011915   0     4     0rhijmans X12 = con(hotm == 12, q12, -9999)
+200601011915   0     5     0rhijmans Y12 = con(cldm == 12, q12, -9999)
+200601011915   0    13     0rhijmans TMP1 = max(x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12)
+200601011915   0     5     0rhijmans P18 = int(floor(tmp1 + 0.5))
+200601011915   0    11     0rhijmans TMP2 = max(y1,y2,y3,y4,y5,y6,y7,y8,y9,y10,y11,y12)
+200601011916   1     5     0rhijmans P19 = int(floor(tmp2 + 0.5))
+200601011916   0     0     0rhijmans KILL x1
+200601011916   0     0     0rhijmans KILL y1
+200601011916   0     0     0rhijmans KILL x2
+200601011916   0     0     0rhijmans KILL y2
+200601011916   0     0     0rhijmans KILL x3
+200601011916   0     0     0rhijmans KILL y3
+200601011916   0     0     0rhijmans KILL x4
+200601011916   0     0     0rhijmans KILL y4
+200601011916   0     0     0rhijmans KILL x5
+200601011916   0     0     0rhijmans KILL y5
+200601011916   0     0     0rhijmans KILL x6
+200601011916   0     0     0rhijmans KILL y6
+200601011916   0     0     0rhijmans KILL x7
+200601011916   0     0     0rhijmans KILL y7
+200601011916   0     0     0rhijmans KILL x8
+200601011916   0     0     0rhijmans KILL y8
+200601011916   0     0     0rhijmans KILL x9
+200601011916   0     0     0rhijmans KILL y9
+200601011916   0     0     0rhijmans KILL x10
+200601011916   0     0     0rhijmans KILL y10
+200601011916   0     0     0rhijmans KILL x11
+200601011916   0     0     0rhijmans KILL y11
+200601011916   0     0     0rhijmans KILL x12
+200601011916   0     0     0rhijmans KILL y12
+200601011916   0     0     0rhijmans KILL hotm
+200601011916   0     0     0rhijmans KILL cldm
+200601011916   0     0     0rhijmans KILL drym
+200601011916   0     0     0rhijmans KILL wetm
+200601011916   0     0     0rhijmans KILL tmp1
+200601011916   0     0     0rhijmans KILL tmp2
+200601011916   0     0     0rhijmans KILL q1
+200601011916   0     0     0rhijmans KILL t1
+200601011916   0     0     0rhijmans KILL q2
+200601011916   0     0     0rhijmans KILL t2
+200601011916   0     0     0rhijmans KILL q3
+200601011916   0     0     0rhijmans KILL t3
+200601011916   0     0     0rhijmans KILL q4
+200601011916   0     0     0rhijmans KILL t4
+200601011916   0     0     0rhijmans KILL q5
+200601011916   0     0     0rhijmans KILL t5
+200601011916   0     0     0rhijmans KILL q6
+200601011916   0     0     0rhijmans KILL t6
+200601011916   0     0     0rhijmans KILL q7
+200601011916   0     0     0rhijmans KILL t7
+200601011916   0     0     0rhijmans KILL q8
+200601011916   0     0     0rhijmans KILL t8
+200601011916   0     1     0rhijmans KILL q9
+200601011916   0     0     0rhijmans KILL t9
+200601011916   0     0     0rhijmans KILL q10
+200601011916   0     0     0rhijmans KILL t10
+200601011916   0     0     0rhijmans KILL q11
+200601011916   0     0     0rhijmans KILL t11
+200601011916   0     0     0rhijmans KILL q12
+200601011916   0     0     0rhijmans KILL t12
+200601011916   0     0     0rhijmans RENAME p1 bio_1
+200601011916   0     0     0rhijmans RENAME p2 bio_2
+200601011916   0     0     0rhijmans RENAME p3 bio_3
+200601011916   0     0     0rhijmans RENAME p4 bio_4
+200601011916   0     0     0rhijmans RENAME p5 bio_5
+200601011916   0     0     0rhijmans RENAME p6 bio_6
+200601011916   0     0     0rhijmans RENAME p7 bio_7
+200601011916   0     0     0rhijmans RENAME p8 bio_8
+200601011916   0     0     0rhijmans RENAME p9 bio_9
+200601011916   0     0     0rhijmans RENAME p10 bio_10
+200601011916   0     0     0rhijmans RENAME p11 bio_11
+200601011916   0     0     0rhijmans RENAME p12 bio_12
+200601011916   0     0     0rhijmans RENAME p13 bio_13
+200601011916   0     0     0rhijmans RENAME p14 bio_14
+200601011916   0     0     0rhijmans RENAME p15 bio_15
+200601011916   0     0     0rhijmans RENAME p16 bio_16
+200601011916   0     0     0rhijmans RENAME p17 bio_17
+200601011916   0     0     0rhijmans RENAME p18 bio_18
+200601011916   0     0     0rhijmans RENAME p19 bio_19
+200601011916  19   225     0rhijmans grid
