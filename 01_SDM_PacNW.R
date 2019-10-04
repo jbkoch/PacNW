@@ -251,17 +251,19 @@ pca.df <- dudi.pca(bioclim_df, scannf = F, nf = 2)
 
 
 ##plot(pca_ZA$li[, 1:2])
+par(mfrow=c(1, 1))
 plot(pca.df$li[, 1:2])
 
 ##tail of distrabutions
-sort(pca_HI$li[, 1])[1:10]
+sort(pca.df$li[, 1], decreasing = TRUE)[1:7]
 
 
 ##IDs of points to remove
-#(to_remove <- which(pca_HI$li[, 1] < -10))
+(to_remove <- which(pca.df$li[, 1] > 11))
 
 #remove points and recompute PCA
-#if(length(to_remove)){bioclim_HI_df <- bioclim_HI_df[ - to_remove]
+if(length(to_remove)){bioclim_df <- bioclim_df[-to_remove]}
+
 #pca_HI <- -dudi.pca(bioclim_HI_df, scannf = F, nf = 2)}
 
 #plot(pca_HI$li[, 1:2])
