@@ -1,5 +1,5 @@
 # Jonathan B. Koch 
-# Script: 01_PacNW_appositus_occurrences_crop_bioclim_vars.R
+# Script: 01_PacNW_bifarius_occurrences_crop_bioclim_vars.R
 # Paper: Climate Change Pacific Northwest Bumble Bees
 # Date: 04 October 2019
 # Website for help with biomod2 scripts: # www.unil.ch/hsdm
@@ -19,7 +19,7 @@ library(sp) # can't be installed with HPC version of R
 
 
 ## load species data into R
-df <- read.table("appositus_unique_occurrences_filterd_gbif.csv",
+df <- read.table("bifarius_unique_occurrences_filterd_gbif.csv",
                  header=TRUE, 
                  sep=",",
                  row.names=NULL)
@@ -40,7 +40,7 @@ ggplot() +
   coord_sf(xlim = c(min_x, max_x), ylim = c(min_y, max_y), expand = FALSE) + #xlim = longitude, ylim = latitude
   geom_point(data = df, aes(x = df$decimalLongitude, y = decimalLatitude), color = "yellow", size = 2)
 
-# B. vosnesnskii, remove occurence that don't match Koch et al. 2012 or Williams et al. 2014
+# Remove occurence that don't match Koch et al. 2012 or Williams et al. 2014
 # nrow(df)
 # df <- subset(df, decimalLongitude <= -115 )
 
