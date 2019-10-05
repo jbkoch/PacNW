@@ -293,6 +293,9 @@ nrow(bioclim_df)
 pca.df <- dudi.pca(bioclim_df,scannf = F, nf = 2)
 plot(pca.df$li[, 1:2])
 
+# write df to .csv so it can be save for the final analysis
+write.csv(df, "vosnesenskii_unique_occurrences_filterd_PCA_gbif.csv",
+          row.names = FALSE)
 
 # make directory to save figure outputs
 # already made Figures directory so save the species x figures accordingly
