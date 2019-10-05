@@ -1,47 +1,29 @@
 # Jonathan B. Koch 
-# Script: 01_PacNW_occurrences_crop_bioclimvariables.R
-# Orginator: Jesse Tabor (UH-Hilo)
-# BiodMod2: X. sonorina
+# Script: 01_PacNW_occurrences_crop_bioclim_vars.R
+# Paper: Climate Change Pacific Northwest Bumble Bees
+# Date: 04 October 2019
+# Website for help with biomod2 scripts: # www.unil.ch/hsdm
 
 ## set where the program saves and looks for data ##
 setwd("/Users/jonathankoch/Google Drive/git_myrepo/PacNW")
-# www.unil.ch/hsdm
+
 # list files
 list.files()
 
-#test
-
-## download the "packages" that have the required functions needed for the study ##
-# install.packages("rgbif")
-# install.packages("biomod2")
-# install.packages("ggplot2")
-# install.packages("gridExtra")
-# install.packages("sf", "rgdal", "ade4", "maptools", "raster", "rasterVis", "latticeExtra", "lattice", "sp")
-# install.packages("sf")
-# install.packages("rgdal")
-# install.packages("ade4")
-# install.packages ("maptools")
-# instal.packages("raster")
-# install.packages("rasterVis")
-# install.packages("latticeExtra")
-# install.packages("lattice")
-# install.packages("sp")
-#test
-
 # load libraries
-library(rgbif)
+# library(rgbif)
 library(biomod2)
-library(ggplot2)
-library(gridExtra)
-library(sf)
-library(ade4)
+# library(ggplot2)
+# library(gridExtra)
+# library(sf)
+# library(ade4)
 library(rgdal)
 library(raster)
 library(maptools)
-library(rasterVis)
-library(latticeExtra)
-library(lattice)
-library(ggmap)
+# library(rasterVis)
+# library(latticeExtra)
+# library(lattice)
+# library(ggmap)
 library(maps)
 library(mapdata)
 library(sp)
