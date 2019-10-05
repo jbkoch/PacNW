@@ -181,10 +181,10 @@ bioclim <- stack(c(bio_1, bio_10, bio_11,
 # create directory to hold clipped and masked bioclim variables
 # only create this directory once 
 setwd("/Users/jonathankoch/Google Drive/git_myrepo/PacNW/bioclim_cropped/")
-dir.create("appositus")
+dir.create("bifarius")
 
 # setwd()
-setwd("/Users/jonathankoch/Google Drive/git_myrepo/PacNW/bioclim_cropped/appositus")
+setwd("/Users/jonathankoch/Google Drive/git_myrepo/PacNW/bioclim_cropped/bifarius")
 
 # WRITE the RASTERS
 # rasters are already made so only do this once
@@ -271,7 +271,8 @@ plot(pca.df$li[, 1:2])
 # setwd
 setwd("/Users/jonathankoch/Google Drive/git_myrepo/PacNW/occurences_pca_filtered")
 getwd()
+list.files()
 
 # write df to .csv so it can be save for the final analysis
-write.csv(df, "appositus_unique_occurrences_filterd_PCA_gbif.csv",
+write.csv(df, "bifarius_unique_occurrences_filterd_PCA_gbif.csv",
           row.names = FALSE)

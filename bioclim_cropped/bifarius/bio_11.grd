@@ -1,13 +1,13 @@
 [general]
 creator=R package 'raster'
-created=2019-10-05 11:54:56
+created=2019-10-05 11:49:26
 [georeference]
-nrows=443
-ncols=558
-xmin=-125.166663806956
-ymin=30.9166714082739
-xmax=-101.916662594404
-ymax=49.3750057042708
+nrows=434
+ncols=613
+xmin=-125.124997138116
+ymin=31.4166714343506
+xmax=-99.5833291393808
+ymax=49.50000571079
 projection=+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0
 [data]
 datatype=FLT4S
@@ -15,12 +15,12 @@ byteorder=little
 nbands=1
 bandorder=BIL
 categorical=FALSE
-minvalue=5
-maxvalue=104
+minvalue=-151
+maxvalue=146
 nodatavalue=-3.4e+38
 [legend]
 legendtype=
 values=
 color=
 [description]
-layername=bio_15
+layername=bio_11
