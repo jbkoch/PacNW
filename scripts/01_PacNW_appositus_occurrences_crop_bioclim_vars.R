@@ -1,5 +1,5 @@
 # Jonathan B. Koch 
-# Script: 01_PacNW_vosnesenskii_occurrences_crop_bioclim_vars.R
+# Script: 01_PacNW_appositus_occurrences_crop_bioclim_vars.R
 # Paper: Climate Change Pacific Northwest Bumble Bees
 # Date: 04 October 2019
 # Website for help with biomod2 scripts: # www.unil.ch/hsdm
@@ -173,12 +173,12 @@ bio_9 <- mask(bio_9,sps)
 bio_9 <-crop(bio_9,sps)
 
 bioclim <- stack(c(bio_1, bio_10, bio_11,
-                    bio_12, bio_13, bio_14,
-                    bio_15, bio_16, bio_17,
-                    bio_18, bio_19, bio_2,
-                    bio_3, bio_4, bio_5,
-                    bio_6, bio_7, bio_8,
-                    bio_9))
+                   bio_12, bio_13, bio_14,
+                   bio_15, bio_16, bio_17,
+                   bio_18, bio_19, bio_2,
+                   bio_3, bio_4, bio_5,
+                   bio_6, bio_7, bio_8,
+                   bio_9))
 
 
 # create directory to hold clipped and masked bioclim variables
