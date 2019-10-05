@@ -15,7 +15,7 @@ list.files()
 # install.packages("biomod2")
 # install.packages("ggplot2")
 # install.packages("gridExtra")
-install.packages("sf", "rgdal", "ade4", "maptools", "raster", "rasterVis", "latticeExtra", "lattice", "sp")
+# install.packages("sf", "rgdal", "ade4", "maptools", "raster", "rasterVis", "latticeExtra", "lattice", "sp")
 # install.packages("sf")
 # install.packages("rgdal")
 # install.packages("ade4")
@@ -296,17 +296,17 @@ plot(pca.df$li[, 1:2])
 
 # make directory to save figure outputs
 # already made Figures directory so save the species x figures accordingly
-dir.create("Figures")
+# dir.create("Figures")
 
 # set to Figures directory
-setwd("./Figures")
+# setwd("./Figures")
 
 # create species specific subdirectory
-dir.create("vosnesenskii")
+# dir.create("vosnesenskii")
 
 # set species specific subdirectory
-setwd("./vosnesenskii")
-getwd()
+# setwd("./vosnesenskii")
+setwd("/Users/jonathankoch/Google Drive/git_myrepo/PacNW/Figures/vosnesenskii")
 
 # save picture
 pdf("Fig1_bioclim_variable_selection.pdf")
@@ -380,6 +380,7 @@ df_models <- BIOMOD_Modeling(data = df_data,
 
 ##get model evaluation scores 
 xsono_models_scores <- get_evaluations(df_models)
+xsono_models_scores
 
 #xsono_models_scores is a 5 deminsional array containing the scores for the models
 
@@ -432,7 +433,7 @@ xsono_sre <- BIOMOD_LoadModels(xsono_models, models = 'SRE')
 xsono_fda <- BIOMOD_LoadModels(xsono_models, models = 'FDA')
 xsono_mars <- BIOMOD_LoadModels(xsono_models, models = 'MARS')
 xsono_gam <- BIOMOD_LoadModels(xsono_models, models = 'GAM')
-# xsono_phi <- BIOMOD_LoadModels(xsono_models, models = 'MAXENT.Phillips')
+xsono_phi <- BIOMOD_LoadModels(xsono_models, models = 'MAXENT.Phillips')
 # xsono_tsu <- BIOMOD_LoadModels(xsono_models, models = 'MAXENT.Tsuruoka')
 
 ##these are graphical visualizations of the response curve of each varaible
