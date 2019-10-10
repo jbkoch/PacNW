@@ -4,6 +4,8 @@
 # Date: 04 October 2019
 # Website for help with biomod2 scripts: # www.unil.ch/hsdm
 
+# test for Jesse to see how it works.
+
 ## set where the program saves and looks for data ##
 setwd("/Users/jonathankoch/Google Drive/git_myrepo/PacNW/occurences_filtered")
 
